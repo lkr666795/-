@@ -10,11 +10,9 @@
 #include "Motor.h"
 #include "Time1.h"
 #include "Bluetooth.h"
-int i=0;
 uint8_t RxData;
 int main(void)
 {
-    
     Key_Init();
     OLED_Init();     
     Encoder_Init();
@@ -22,8 +20,6 @@ int main(void)
     Motor_Init();
     OLED_ShowString(1,1,"INIT");
     //Õ”¬›“«≥ı ºªØ
-    i=MPU_Init();
-    OLED_ShowNum(1,6,i,1);
     while(mpu_dmp_init()){}
         OLED_ShowString(1,8,"ok");
     OLED_ShowSignedNum(3,1,zhili_Kp,4);
