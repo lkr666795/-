@@ -14,6 +14,7 @@ int i=0;
 uint8_t RxData;
 int main(void)
 {
+    
     Key_Init();
     OLED_Init();     
     Encoder_Init();
